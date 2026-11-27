@@ -8,18 +8,18 @@ const STEPS = [
   },
   {
     day: 'Dia 02',
-    title: 'Estrutura & Rastreamento',
-    text: 'Configuração de contas, Pixel/CAPI, Google Meu Negócio e métricas.',
+    title: 'Portal, CRM & Rastreamento',
+    text: 'Configuração de contas, Pixel/CAPI, Google Meu Negócio, Portal de Métricas e CRM WhatsApp.',
   },
   {
     day: 'Dia 03',
-    title: 'Diretrizes de Criativos & Copys',
-    text: 'Definição de ofertas, roteiros e formatos focados em intenção de compra.',
+    title: 'Funil, Ofertas & Alinhamento',
+    text: 'Validação dos criativos enviados pela empresa, organização das etapas de triagem e feedback loop.',
   },
   {
     day: 'Dia 04/05',
     title: 'Ativação & Otimização',
-    text: 'Subida oficial das campanhas e acompanhamento contínuo de performance.',
+    text: 'Subida oficial das campanhas e acompanhamento contínuo de performance em tempo real.',
   },
 ]
 

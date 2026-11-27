@@ -9,9 +9,14 @@ import { WhatsAppButton } from '@/components/whatsapp-button'
 export function SiteHeader() {
   const [open, setOpen] = useState(false)
 
+  const menuLinks = [
+    ...NAV_LINKS,
+    { href: '#dados-funil', label: 'Dados & Portal' },
+  ]
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-border/80 bg-background/85 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-6 px-5 md:h-18">
+    <header className="sticky inset-x-0 top-0 z-50 border-b border-border/80 bg-background/90 backdrop-blur-md">
+      <div className="mx-auto flex min-h-[72px] max-w-6xl items-center justify-between gap-4 px-5 pt-4 pb-3 md:h-20 md:py-0">
         <a href="#inicio" aria-label="SD Tráfego & Dados — voltar ao início" className="shrink-0">
           <Image
             src="/images/logo-sd-horizontal.png"
@@ -19,13 +24,13 @@ export function SiteHeader() {
             width={754}
             height={192}
             priority
-            className="h-9 w-auto md:h-10"
+            className="h-8 w-auto sm:h-9 md:h-10"
           />
         </a>
 
         <nav aria-label="Navegação principal" className="hidden lg:block">
-          <ul className="flex items-center gap-8">
-            {NAV_LINKS.map((link) => (
+          <ul className="flex items-center gap-7">
+            {menuLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
@@ -38,7 +43,7 @@ export function SiteHeader() {
           </ul>
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2.5">
           <WhatsAppButton
             id="btn-whatsapp-header"
             location="header"
@@ -62,7 +67,7 @@ export function SiteHeader() {
       {open && (
         <nav id="mobile-nav" aria-label="Navegação móvel" className="border-t border-border bg-background lg:hidden">
           <ul className="mx-auto flex max-w-6xl flex-col px-5 py-3">
-            {NAV_LINKS.map((link) => (
+            {menuLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
